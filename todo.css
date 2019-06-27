@@ -1,0 +1,69 @@
+.done-true {
+      text-decoration: line-through;
+      color: grey;
+    }
+
+    input:required {
+    box-shadow:none;
+    }
+ #head
+ {
+ 	font-size:45px;
+ 	text-align: center;
+ 	color:Purple;
+ 	font-family: TimesNewRoman;
+ 	font-style: Italic;
+ }
+
+ #List{
+ 	text-align: :center;
+  color:#0000A0;
+  font-size:20px;
+  list-style: none;
+ }
+
+body{
+ 
+ 	background-image: url('clock.jpg');
+ }
+
+ #remove{
+ color:Brown;
+ }
+
+ #edit{
+ color:Brown;
+ }
+
+ #save{
+ color:Brown;
+ }
+
+ #cancel{
+color:Brown;
+ }
+
+ #additems{
+ height:30px;
+ width:400px;
+ color:blue;
+
+ }
+ .btn{
+ 	color:Indigo;
+
+ }
+
+ #div1
+ {
+ 	text-align: center;
+ }
+ #Task
+ {
+ 	text-align:center;
+ 	color:maroon;
+ }
+ #Action{
+ 	text-align:center;
+ 	color:maroon;
+ }

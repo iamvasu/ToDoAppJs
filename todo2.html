@@ -1,0 +1,46 @@
+<!doctype html>
+<html ng-app="myModule">
+<head>
+  <title> My ToDo App</title>
+    <script src="angular.min.js"></script>
+    <script src="todo2.js"></script>
+    <link rel="stylesheet" type="text/css" href="todo.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    </head>
+<body>
+
+<h2 id="head">My ToDo App</h2>
+
+<div id="div1" ng-controller="myController">
+
+<form ng-submit="addTodo()" name="form">
+    <input id="additems" type="text" ng-model="todoText"  size="25" placeholder="Add new items" required>
+    <input type="submit" class="btn" value="Add"> 
+</form>
+
+<table class="table table-bordered">
+    <thead>
+        <th id="Task">Task</th>
+        <th id="Action">Action</th>
+    </thead>
+    <tbody>
+        <tr ng-repeat="todo in todos">
+            <td>
+                <input type="checkbox" ng-model="todo.done">
+                <span class="done-{{ todo.done }}" ng-hide="editing">{{ todo.text }}</span>
+            </td>
+            <td>
+              <input type="text" ng-show="editing" ng-model="todo.text">
+              <button type="button" class="btn btn-warning" ng-click="remove()">Remove</button>
+              <button id="edit" type="submit" class="btn btn-info" ng-hide="editing" ng-click="change(todo); editing === true">Edit</button>
+              <button id="save" type="submit" ng-show="editing" ng-click="save(); editing === false">Save</button>
+              <button id="cancel" type="submit" ng-show="editing" ng-click="cancel(); editing === false">Cancel</button>          
+            </td>          
+        </tr>
+    </tbody>
+</table>
+
+</div>    
+</body>
+</html>
